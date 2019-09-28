@@ -7,5 +7,6 @@ module.exports = {
     "port": process.env.MIGRATION_DB_PORT,
     "database": process.env.MIGRATION_DB_NAME,
     "username": process.env.MIGRATION_DB_USER,
-    "password": process.env.MIGRATION_DB_PASSWORD
+    "password": process.env.MIGRATION_DB_PASSWORD,
+    "ssl": !!process.env.SSL
 }
