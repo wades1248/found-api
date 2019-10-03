@@ -1,26 +1,27 @@
-# Express Boilerplate!
+# Found API
 
-This is a boilerplate project used for starting new projects!
+This is an API for use with Found, a lost and fount app tha reconnects people with items left behnd at businesses. Users may post items to, access items on, and delete items from the server. 
 
-## Set up
+## Technologies
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+This API was built using Node.js and Express. The database was built with postgres.sql. Migrations are handled with postgrator. 
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## CORS
 
-## Scripts
+This API supports currently supports GET, POST, and DELETE operations for the "items" endpoints.
 
-Start the application `npm start`
+## API Documentation
 
-Start nodemon for the application `npm run dev`
+### Authorization
 
-Run the tests `npm test`
+This API requires Bearer token authorization with a verified API Token. As of now API tokens are not available to the public upon request.
 
-## Deploying
+### /items
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+The /items endpoint supports GET and POST methods 
+example url: https://sleepy-atoll-97874.herokuapp.com/api/items
+
+### /items/:item_confirmation
+
+The /itemss/:item_confirmation endpoint supports GET and DELEte methods
+example url: https://sleepy-atoll-97874.herokuapp.com/api/items/463cfa90-e4d1-11e9-80d6-edf9336d54d9
